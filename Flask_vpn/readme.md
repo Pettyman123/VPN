@@ -1,5 +1,8 @@
 <h1>Simple VPN Web Application Using Flask</h1>
 
+![image](https://github.com/user-attachments/assets/0c71bfae-ed71-46ac-a900-8636be9aa442)
+
+
 <h2>Introduction</h2>
 This project demonstrates the creation of a simple Virtual Private Network (VPN) using Python and socket programming, integrated with a Flask web application for user interaction. The web application allows users to start the VPN server and client, and view their logs in a user-friendly interface.
 
@@ -55,4 +58,4 @@ Create templates/index.html for the web interface.
 This project provides a basic implementation of a VPN using Python and socket programming, integrated with a Flask web application for user interaction. It demonstrates key concepts and offers a foundation for further enhancements and optimizations.
 
 <h2>CREATED BY: GOURAV SHARMA</h2>
-<
+
