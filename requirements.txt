@@ -1,0 +1,5 @@
+Flask==2.1.1
+pytesseract==0.3.10
+Pillow==9.1.0
+cryptography==3.4.8
+base64==8.32
