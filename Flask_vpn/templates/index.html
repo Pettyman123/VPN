@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple VPN Web App</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .button { margin: 10px; }
+        #logs { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Simple VPN Web App</h1>
+    <button class="button" onclick="startServer()">Start Server</button>
+    <button class="button" onclick="startClient()">Start Client</button>
+    <div id="logs">
+        <h2>Logs</h2>
+        <pre id="logMessages"></pre>
+    </div>
+    <script>
+        function startServer() {
+            fetch('/start_server', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    getLogs();
+                });
+        }
+
+        function startClient() {
+            fetch('/start_client', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    getLogs();
+                });
+        }
+
+        function getLogs() {
+            fetch('/logs')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('logMessages').textContent = data.join('\n');
+                });
+        }
+
+        setInterval(getLogs, 1000); // Refresh logs every second
+    </script>
+</body>
+</html>
